@@ -22,11 +22,11 @@ export class ContactService {
     return this.http.get<Contact>(this.URL_API + `/contactList/${id}`)
   }
 
-  create(contact: any){
+  create(contact: Contact){
     return this.http.post<Contact>(this.URL_API + '/createContact', contact);
   }
 
-  update(id: number,  contact: any){
+  update(id: number,  contact: Contact){
     return this.http.put<Contact>(this.URL_API + `/updateContact/${id}`, contact);
   }
 
